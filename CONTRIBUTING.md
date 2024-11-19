@@ -2,7 +2,7 @@
 
 Thank you for investing your time in contributing to Scaffold-ETH 2!
 
-This guide aims to provide an overview of the contribution workflow to help us make the contribution process effective for everyone involved.
+This guide aims to provide an overview of the contribution workflow to help streamline the contribution process for all participants.
 
 ## About the Project
 
@@ -12,7 +12,7 @@ Read the [README](README.md) to get an overview of the project.
 
 ### Vision
 
-The goal of Scaffold-ETH 2 is to provide the primary building blocks for a decentralized application.
+The goal of Scaffold-ETH 2 is to provide the essential building blocks for developing decentralized applications.
 
 The repo can be forked to include integrations and more features, but we want to keep the master branch simple and minimal.
 
@@ -35,8 +35,8 @@ Contributions are made via Issues and Pull Requests (PRs). A few general guideli
 - Search for existing Issues and PRs before creating your own.
 - Contributions should only fix/add the functionality in the issue OR address style issues, not both.
 - If you're running into an error, please give context. Explain what you're trying to do and how to reproduce the error.
-- Please use the same formatting in the code repository. You can configure your IDE to do it by using the prettier / linting config files included in each package.
-- If applicable, please edit the README.md file to reflect the changes.
+- Please ensure your code adheres to the repository's formatting standards. You can configure your IDE to do it by using the prettier / linting config files included in each package.
+- If your changes impact functionality or usage, please update the README.md file accordingly.
 
 ### Issues
 
@@ -46,7 +46,7 @@ Issues should be used to report problems, request a new feature, or discuss pote
 
 Scan through our [existing issues](https://github.com/scaffold-eth/scaffold-eth-2/issues) to find one that interests you.
 
-If a contributor is working on the issue, they will be assigned to the individual. If you find an issue to work on, you are welcome to assign it to yourself and open a PR with a fix for it.
+If a contributor is working on the issue, they will be assigned to the individual. If you find an issue to work on, you are welcome to assign it to yourself and open a PR with a fix.
 
 #### Create a new issue
 
@@ -75,8 +75,8 @@ Here are some tips for a high-quality pull request:
 
 - Create a title for the PR that accurately defines the work done.
 - Structure the description neatly to make it easy to consume by the readers. For example, you can include bullet points and screenshots instead of having one large paragraph.
-- Add the link to the issue if applicable.
-- Have a good commit message that summarises the work done.
+- If the PR addresses an issue, include its link in the description.
+- Have a good commit message that summarizes the work done.
 
 Once you submit your PR:
 
