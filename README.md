@@ -71,7 +71,7 @@ Copy the content of file `https://github.com/tokenlin/monad-demo/blob/main/packa
  
     We need to add private key prefixed with of "0x" to `DEPLOYER_PRIVATE_KEY`, and RPC to `MONAD_RPC`.
 
-    `NOTE`: `ALCHEMY_API_KEY` built-in is the public key for users. Sometimes it is restricted due to too many calls. It is recommended to change it to your own key.
+    NOTE: `ALCHEMY_API_KEY` built-in is the public key for users. Sometimes it is restricted due to too many calls. It is recommended to change it to your own key.
 
 
 2. Set `monad` Chain
@@ -125,7 +125,7 @@ Copy the content of file `https://github.com/tokenlin/monad-demo/blob/main/packa
 
   Then, you can view the complete UI on your `http://localhost:3000`. Currently it is base on the contract deployed on local testnet.
 
-  In order to test on the local test network, firstly need to get local native token to pay gas, just click the right-top buttom to grab funds from faucet.
+  In order to test on the local test network, firstly need to get local native token to pay gas, just click the top-right button to grab funds from the faucet.
 
 
 2. Connect to Chain-`sepolia`
