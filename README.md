@@ -21,7 +21,7 @@ Before you begin, you need to install the following tools:
 
 ## Start
 
-Enter the file directory you just created, and there are two important folders under the packages folder, one is Foundery which manages our solidity contracts including compile, deploy, and test.
+Enter the file directory you just created, and there are two important folders under the packages folder, one is Foundry which manages our solidity contracts including compile, deploy, and test.
 
 And we need to open 3 separate terminals.
 
