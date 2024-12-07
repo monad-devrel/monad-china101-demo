@@ -21,7 +21,7 @@ Before you begin, you need to install the following tools:
 
 ## Start
 
-Enter the file directory you just created, and there are two important folders under the packages folder, one is Foundery which manages our solidity contracts including compile, deploy, and test.
+Enter the file directory you just created, and there are two important folders under the packages folder, one is Foundry which manages our solidity contracts including compile, deploy, and test.
 
 And we need to open 3 separate terminals.
 
@@ -125,7 +125,7 @@ Copy the content of file `https://github.com/tokenlin/monad-demo/blob/main/packa
 
   Then, you can view the complete UI on your `http://localhost:3000`. Currently it is base on the contract deployed on local testnet.
 
-  In order to test on the local test network, firstly need to get local native token to pay gas, just click the right-top buttom to grab funds from faucet.
+  In order to test on the local test network, firstly need to get local native token to pay gas, just click the right-top button to grab funds from faucet.
 
 
 2. Connect to Chain-`sepolia`
