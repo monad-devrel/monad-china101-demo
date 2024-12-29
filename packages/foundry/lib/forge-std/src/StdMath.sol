@@ -19,7 +19,7 @@ library stdMath {
 
     function delta(int256 a, int256 b) internal pure returns (uint256) {
         // a and b are of the same sign
-        // this works thanks to two's complement, the left-most bit is the sign bit
+        // this works thanks to the two's complement, the left-most bit is the sign bit
         if ((a ^ b) > -1) {
             return delta(abs(a), abs(b));
         }
