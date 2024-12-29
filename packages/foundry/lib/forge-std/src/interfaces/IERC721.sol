@@ -32,7 +32,7 @@ interface IERC721 is IERC165 {
     function balanceOf(address _owner) external view returns (uint256);
 
     /// @notice Find the owner of an NFT
-    /// @dev NFTs assigned to zero address are considered invalid, and queries
+    /// @dev NFTs assigned to zero addresses are considered invalid, and queries
     /// about them do throw.
     /// @param _tokenId The identifier for an NFT
     /// @return The address of the owner of the NFT
@@ -42,14 +42,14 @@ interface IERC721 is IERC165 {
     /// @dev Throws unless `msg.sender` is the current owner, an authorized
     /// operator, or the approved address for this NFT. Throws if `_from` is
     /// not the current owner. Throws if `_to` is the zero address. Throws if
-    /// `_tokenId` is not a valid NFT. When transfer is complete, this function
+    /// `_tokenId` is not a valid NFT. When the transfer is complete, this function
     /// checks if `_to` is a smart contract (code size > 0). If so, it calls
     /// `onERC721Received` on `_to` and throws if the return value is not
     /// `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`.
     /// @param _from The current owner of the NFT
     /// @param _to The new owner
     /// @param _tokenId The NFT to transfer
-    /// @param data Additional data with no specified format, sent in call to `_to`
+    /// @param data Additional data with no specified format, sent in a call to `_to`
     function safeTransferFrom(address _from, address _to, uint256 _tokenId, bytes calldata data) external payable;
 
     /// @notice Transfers the ownership of an NFT from one address to another address
