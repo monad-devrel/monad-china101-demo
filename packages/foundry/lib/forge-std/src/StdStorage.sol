@@ -50,8 +50,8 @@ library stdStorageSafe {
     }
 
     // Tries mutating slot value to determine if the targeted value is stored in it.
-    // If current value is 0, then we are setting slot value to type(uint256).max
-    // Otherwise, we set it to 0. That way, return value should always be affected.
+    // If the current value is 0, then we are setting the slot value to type(uint256).max
+    // Otherwise, we set it to 0. That way, the return value should always be affected.
     function checkSlotMutatesCall(StdStorage storage self, bytes32 slot) internal returns (bool) {
         bytes32 prevSlotValue = vm.load(self._target, slot);
         (bool success, bytes32 prevReturnValue) = callTarget(self);
@@ -66,7 +66,7 @@ library stdStorageSafe {
         return (success && (prevReturnValue != newReturnValue));
     }
 
-    // Tries setting one of the bits in slot to 1 until return value changes.
+    // Tries setting one of the bits in the slot to 1 until the return value changes.
     // Index of resulted bit is an offset packed slot has from left/right side
     function findOffset(StdStorage storage self, bytes32 slot, bool left) internal returns (bool, uint256) {
         for (uint256 offset = 0; offset < 256; offset++) {
@@ -88,7 +88,7 @@ library stdStorageSafe {
         (bool foundLeft, uint256 offsetLeft) = findOffset(self, slot, true);
         (bool foundRight, uint256 offsetRight) = findOffset(self, slot, false);
 
-        // `findOffset` may mutate slot value, so we are setting it to initial value
+        // `findOffset` may mutate slot value, so we are setting it to the initial value
         vm.store(self._target, slot, prevSlotValue);
         return (foundLeft && foundRight, offsetLeft, offsetRight);
     }
@@ -143,7 +143,7 @@ library stdStorageSafe {
                     }
                 }
 
-                // Check that value between found offsets is equal to the current call result
+                // Check that the value between found offsets is equal to the current call result
                 uint256 curVal = (uint256(prev) & getMaskByOffsets(offsetLeft, offsetRight)) >> offsetRight;
 
                 if (uint256(callResult) != curVal) {
