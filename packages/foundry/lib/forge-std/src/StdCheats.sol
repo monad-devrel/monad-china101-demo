@@ -540,7 +540,7 @@ abstract contract StdCheatsSafe {
         (addr,) = makeAddrAndKey(name);
     }
 
-    // Destroys an account immediately, sending the balance to beneficiary.
+    // Destroys an account immediately, sending the balance to the beneficiary.
     // Destroying means: balance will be zero, code will be empty, and nonce will be 0
     // This is similar to selfdestruct but not identical: selfdestruct destroys code and nonce
     // only after tx ends, this will run immediately.
@@ -595,7 +595,7 @@ abstract contract StdCheatsSafe {
         vm.pauseGasMetering();
         // To prevent turning gas monitoring back on with nested functions that use this modifier,
         // we check if gasMetering started in the off position. If it did, we don't want to turn
-        // it back on until we exit the top level function that used the modifier
+        // it back on until we exit the top-level function that used the modifier
         //
         // i.e. funcA() noGasMetering { funcB() }, where funcB has noGasMetering as well.
         // funcA will have `gasStartedOff` as false, funcB will have it as true,
