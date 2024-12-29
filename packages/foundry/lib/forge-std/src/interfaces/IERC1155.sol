@@ -26,7 +26,7 @@ interface IERC1155 is IERC165 {
     /// - The `_from` argument MUST be the address of the holder whose balance is decreased.
     /// - The `_to` argument MUST be the address of the recipient whose balance is increased.
     /// - The `_ids` argument MUST be the list of tokens being transferred.
-    /// - The `_values` argument MUST be the list of number of tokens (matching the list and order of tokens specified in _ids) the holder balance is decreased by and match what the recipient balance is increased by.
+    /// - The `_values` argument MUST be the list of a number of tokens (matching the list and order of tokens specified in _ids) the holder balance is decreased by and matches what the recipient balance is increased by.
     /// - When minting/creating tokens, the `_from` argument MUST be set to `0x0` (i.e. zero address).
     /// - When burning/destroying tokens, the `_to` argument MUST be set to `0x0` (i.e. zero address).
     event TransferBatch(
@@ -51,7 +51,7 @@ interface IERC1155 is IERC165 {
     /// @param _to Target address
     /// @param _id ID of the token type
     /// @param _value Transfer amount
-    /// @param _data Additional data with no specified format, MUST be sent unaltered in call to `onERC1155Received` on `_to`
+    /// @param _data Additional data with no specified format, MUST be sent unaltered in a call to `onERC1155Received` on `_to`
     function safeTransferFrom(address _from, address _to, uint256 _id, uint256 _value, bytes calldata _data) external;
 
     /// @notice Transfers `_values` amount(s) of `_ids` from the `_from` address to the `_to` address specified (with safety call).
@@ -67,7 +67,7 @@ interface IERC1155 is IERC165 {
     /// @param _to Target address
     /// @param _ids IDs of each token type (order and length must match _values array)
     /// @param _values Transfer amounts per token type (order and length must match _ids array)
-    /// @param _data Additional data with no specified format, MUST be sent unaltered in call to the `ERC1155TokenReceiver` hook(s) on `_to`
+    /// @param _data Additional data with no specified format, MUST be sent unaltered in a call to the `ERC1155TokenReceiver` hook(s) on `_to`
     function safeBatchTransferFrom(
         address _from,
         address _to,
